@@ -17,10 +17,10 @@ module.exports = {
   deploy: {
     production: {
       user: "ubuntu",
-      host: "13.234.76.203",
+      host: "65.0.89.211",
       ref: "origin/master",
-      repo: "git@github.com:mrinq/access_control_management.git",
-      path: "/home/ubuntu/access_control_management",
+      repo: "git@github.com:PallaviNaik7/permissionManagementAnalysis.git",
+      path: "/home/ubuntu/permission_management_analysis",
       "post-deploy":
         "npm install && node_modules/.bin/sequelize db:migrate --env production && pm2 reload ecosystem.config.js --env production",
     },
