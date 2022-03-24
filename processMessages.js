@@ -1,6 +1,6 @@
 module.exports.processMessages = async function (body, models, messageId) {
   console.log("BODY:", body);
-  let env = body.env;
+  let env = "default";
   let version = 0;
   let permissionAddedCount = 0;
   let permissionDeletedCount = 0;
@@ -8,6 +8,10 @@ module.exports.processMessages = async function (body, models, messageId) {
   let accessPointId = 0;
   let msgData = body.data;
   let integratorId = msgData.integratorId;
+
+  if (body.env) {
+    env = body.env;
+  }
 
   //   switch (msgType){
 
